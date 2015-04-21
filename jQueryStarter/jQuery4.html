@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jQuery Practice 3 - DOM Traversal</title>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/jq4.css" />
+  <script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+<body>
+  
+  <div class="row">
+    <div class="small-12 large-12 columns">
+      <ul class="list">
+        <li>one</li>
+        <li class="special">two</li>
+        <li>three</li>
+        <li>
+          <ul class="sublist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+  
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+  
+  <script>
+    $(function() {
+
+      // $('li').on('click', function() {
+      //   $(this).next().hide();
+      // })
+
+      // $('li').on('click', function() {
+      //   $(this).removeClass('special');
+      //   $(this).siblings().addClass('special');
+      // })
+      
+      // $('li').on('click', function() {
+      //   $(this).parent().addClass('special');
+      // })
+      
+      // $('li').on('click', function() {
+      //   $(this).closest('.list').addClass('special');
+      // });
+
+      // $('li').on('click', function() {
+      //   $(this).find('li').filter(':first').addClass('special');
+      // });
+
+
+      // $('.list').on('click', function() {
+      //   $(this).find('.special').remove();
+      // });
+
+      // Filter Method of above example
+      // $('.list').on('click', function() {
+      //   $(this).find('li').filter('.special').remove();
+      // });
+
+
+      // $('.special').on('click', function() {
+      //     alert('special');
+      // });
+
+      // $('li').on('click', function() {
+      //   $(this).hide();
+      //   if( $(this).is('.special')) {
+      //     alert ('special');
+      //   } else if ($(this).not('.special')) {
+      //     alert('not special');
+      //   }
+      // });
+
+      $('li').on('click', function() {
+        console.log("clicked li");
+        // other stuff to all li's
+        if($(this).parent().is('.sublist')) {
+          $(this).hide();
+        }
+      });
+
+
+
+
+    });
+  </script>
+
+
+  <!-- Live Reload -->
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
