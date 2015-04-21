@@ -1,0 +1,1 @@
+Repo for practicing more Front End Development with JS and jQuery
