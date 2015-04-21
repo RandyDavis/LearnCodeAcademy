@@ -1,0 +1,21 @@
+///////////////////////////////////////////
+//            4 PANEL STYLES
+///////////////////////////////////////////
+.panelRow {
+  display: inline-block;
+  border: 1px solid #008cba;
+  border-radius: 3px;
+  width: 100%;
+  h5 {
+    background-color: #008cba;
+    color: white;
+    padding: 8px 10px;
+    position: relative;
+    top: -3px;
+  }
+  p {
+    color: #999;
+    padding: 8px 10px;
+  }
+}
+
