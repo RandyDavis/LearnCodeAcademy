@@ -1,0 +1,20 @@
+/* line 4, ../scss/jq1.scss */
+.panelRow {
+  display: inline-block;
+  border: 1px solid #008cba;
+  border-radius: 3px;
+  width: 100%;
+}
+/* line 9, ../scss/jq1.scss */
+.panelRow h5 {
+  background-color: #008cba;
+  color: white;
+  padding: 8px 10px;
+  position: relative;
+  top: -3px;
+}
+/* line 16, ../scss/jq1.scss */
+.panelRow p {
+  color: #999;
+  padding: 8px 10px;
+}

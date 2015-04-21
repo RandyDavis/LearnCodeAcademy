@@ -1,0 +1,28 @@
+/* line 1, ../scss/main.scss */
+#header {
+  background-color: #999;
+}
+/* line 3, ../scss/main.scss */
+#header h1 {
+  color: white;
+  font-size: 150%;
+}
+
+/* line 10, ../scss/main.scss */
+#content input {
+  width: 25em;
+  height: 33px;
+  display: inline;
+}
+
+/* line 17, ../scss/main.scss */
+h2 {
+  padding: 20px 0;
+}
+
+/* line 21, ../scss/main.scss */
+.footer {
+  background-color: #000;
+  color: #999;
+  padding: 10px 0;
+}

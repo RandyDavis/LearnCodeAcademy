@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>jQuery Practice 1 - Foundation</title>
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <link rel="stylesheet" href="stylesheets/jq1.css" />
+  <script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+<body>
+  
+  <div class="row">
+    <div class="small-12 large-12 columns panel">
+      <div class="small-1 large-3 columns"></div>
+      <div class="small-10 small-offset-1 large-6 large-offset-3 columns text-center">
+        <h1>Let's Have Fun!</h1>
+        <a href="#" class="button small" id="btn1">#btn1</a>
+        <a href="#" class="button small" id="btn2">#btn2</a>
+        <a href="#" class="button small" id="btn3">#btn3</a>
+        <a href="#" class="button small" id="btn4">#btn4</a>
+      </div>
+      <div class="small-1 large-3 columns"></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-3 columns">
+      <div class="panelRow">
+        <div id="panel1">
+          <h5 class="panel-heading">#panel1</h5>
+          <p class="panel-body">content</p>
+        </div>
+      </div>
+    </div>
+    <div class="small-3 columns">
+      <div class="panelRow">
+        <div id="panel2">
+          <h5 class="panel-heading">#panel2</h5>
+          <p class="panel-body">content</p>
+        </div>
+      </div> 
+    </div>
+    <div class="small-3 columns">
+      <div class="panelRow">
+        <div id="panel3">
+          <h5 class="panel-heading">#panel3</h5>
+          <p class="panel-body">content</p>     
+        </div>
+      </div>
+    </div>
+    <div class="small-3 columns">
+      <div class="panelRow">
+        <div id="panel4">
+          <h5 class="panel-heading">#panel4</h5>
+          <p class="panel-body">content</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+  
+  <script>
+
+    $(function(){
+
+      // $('#panel1').fadeToggle(1000).delay(600).fadeToggle(1000);
+      $("#panel1").hide()
+      $("#panel2").css({opacity: '0.5'});
+      // $('#panel2').slideUp(500).delay(700).slideDown(500);
+
+    });
+
+
+
+  </script>
+
+  <!-- Live Reload -->
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

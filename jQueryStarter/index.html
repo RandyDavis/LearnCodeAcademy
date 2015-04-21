@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/main.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="small-12 columns" id="header">
+        <h1><a href="#">My Site</a></h1>
+    </div>
+
+    <div class="row">
+      <div class="small-12 columns main" id="content">
+        <h2>Hey, Here's my site</h2>
+        <ul>
+          <li>milk</li>
+          <li>eggs</li>
+        </ul>
+
+        <input type="text" id="name">
+        <a href="#" id="addOne" class="button tiny">Add One</a>
+      </div>
+    </div>
+
+    <div class="small-12 columns footer">
+      <div class="row">
+        <div class="small-12 columns" id="footer">&copy; 2015 &nbsp; DevRandy</div>
+      </div>
+    </div>
+    
+    
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $('#header h1').html('My Awesome Site');
+      $('ul').append('<li>veggies</li>');
+      $('ul').prepend('<li>orange juice</li>');
+
+      // Add New Item on Click
+      $('#addOne').click(function() {
+        var value = $('#name').val();
+        $('ul').append('<li>' + value + '</li>');
+        console.log(value);
+      });
+
+    </script>
+
+    <!-- Live Reload -->
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
+</html>
