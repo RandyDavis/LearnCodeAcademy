@@ -1,5 +1,9 @@
 angular.module('app')
-  .controller('HomeController', ["$scope", function($scope) {
+  .controller('HomeController', ["$scope", "Friends", function($scope, Friends) {
     $scope.title = "Home";
-    $scope.items = ["item1", "item2", "item3"];
+    Friends.get().then(function(data) {
+      $scope.friends = data;
+    });
+    $scope.items = ["home", "about", "contact"];
+    $scope.selectedValue = "home";
   }]);

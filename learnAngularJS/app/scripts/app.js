@@ -6,14 +6,19 @@ angular.module('app', ['ui.router'])
       .state('home', {
         url: '/',
         templateUrl: 'views/home.html',
-        controller: ["$scope", function($scope) {
-          $scope.title = "Home";
-          $scope.items = ["item1", "item2", "item3"];
-        }]
+        controller: 'HomeController',
+        // resolve: {
+        //   friends: ['$http', function($http) {
+        //     return $http.get('/api/friends.json').then(function(response) {
+        //       return response.data;
+        //     });
+        //   }]
+        // }
       })
       .state('about', {
         url: '/about',
-        templateUrl: 'views/about.html'
+        templateUrl: 'views/about.html',
+        controller: 'AboutController'
       })
       .state('contact', {
         url: '/contact',
